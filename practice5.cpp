@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int maain(){
+int main(){
 
     int a,b;
 
@@ -17,8 +17,8 @@ int maain(){
     a=a-b;
 
     cout<<"value of a:-"<<int(a)<<endl;
-    cout<<"value of b:-"<<int(a);
+    cout<<"value of b:-"<<int(b);
 
-    return 0;
+    
 
 }
