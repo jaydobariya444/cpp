@@ -31,7 +31,7 @@
             cout<<unit;
         }else{
 
-            rs=1;
+            rs=0.90+0.15;
         }
 
         total = unit * rs + charge;
