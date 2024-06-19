@@ -7,7 +7,7 @@ class cricket
     char bname[20];
     int innings, notout, runs;
     float batavg;
-    void calcavg(int innings,int notout,int runs);
+    float calcavg(int innings,int notout,int runs);
     
     public:
     void readdata()
@@ -35,15 +35,15 @@ class cricket
     }
 };
 
-void cricket::calcavg(int innings,int notout,int runs)
+float cricket::calcavg(int innings,int notout,int runs)
 {
     batavg =runs/(innings-notout);
 }
 
 int main ()
 {
-  class cricket b1;
-  b1.readdata();
-  b1.displaydata();
+  class cricket st;
+  st.readdata();
+  st.displaydata();
   return 0;
 }
