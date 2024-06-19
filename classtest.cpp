@@ -30,7 +30,7 @@ class Test{
         cout<<"CenterRequired"<<CenterReqd<<endl;
         cout<<"descriotion"<<description<<endl;
         cout<<"calculate "<<calcntr(nocandidate,testcode,CenterReqd);
-        // calcntr
+        
     
     }
 };

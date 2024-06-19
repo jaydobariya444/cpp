@@ -2,47 +2,67 @@
 
 using namespace std;
 
-class Test{
+class cpp{
 
-    private:    
-    int testcode, nocandidate, CenterReqd;
-    char description[100000];
-    float calcntr(int nocandidate,int testcode,int  CenterReqd);
+    private:
+
+    int flightnumber;
+    char destination[500];
+    float distance,fual;
+    float calcfual(int flightnumber, float fual, float distance);
 
     public:
-    void SCHEDULE(){
+    void FEEDINFO(){
 
-        cout<<"enter testcode:-";
-        cin>>testcode;
-        cout<<"Enter nocandidate:-";
-        cin>>nocandidate;
-        cout<<"Enter CenterReqd:-";
-        cin>>CenterReqd;
-        cout<<"Enter description:-";
-        cin>>description;   
-        
-    } 
+        cout<<"enter flightnumber:-";
+        cin>>flightnumber;
+        cout<<"Enter destination:-";
+        cin>>destination;
+        cout<<"Enter distance:-";
+        cin>>distance;
+        // cout<<"Enter fuel:-";
+        // cin>>fuel;  
 
-    void DISPTEST(){
+        if(distance<=1000){
+            cout<<"fual=500";
+        }
+        else if(distance>1000&&distance<=2000){
+            cout<<"fual = 1100";
+        }
+        else{
+            cout<<"fual=2200";
+        }
 
-        cout<<"testcode"<<testcode<<endl;
-        cout<<"non candiadte"<<nocandidate<<endl;
-        cout<<"CenterRequired"<<CenterReqd<<endl;
-        cout<<"descriotion"<<description<<endl;
-        cout<<"calculate "<<calcntr(nocandidate,testcode,CenterReqd);
-        // calcntr
-    
+    }
+
+    void SHOWINFO(){
+
+        cout<<"flightnumber:-"<<flightnumber<<endl;
+        cout<<"destination:-"<<destination<<endl;
+        cout<<"distance:-"<<distance<<endl;
+        // cout<<"fuel:-"<<fuel<<endl;
+        cout<<"calculate fual:-"<<calcfual(flightnumber,fual,distance);
+
+        if(distance<=1000){
+            cout<<"fual=500";
+        }
+        else if(distance>1000&&distance<=2000){
+            cout<<"fual = 1100";
+        }
+        else{
+            cout<<"fual=2200";
+        }
+
     }
 };
-
-float Test:: calcntr(int nocandidate, int testcode, int CenterReqd){
-    return (nocandidate/100+1);
+float cpp:: calcfual(int flightnumber, float fual, float distance){
+    
 }
+
 int main(){
 
-    class Test t;
-    t.SCHEDULE();
-    t.DISPTEST();
-
+    class cpp tour;
+    tour.FEEDINFO();
+    tour.SHOWINFO();
     return 0;
 }
