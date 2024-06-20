@@ -1,47 +1,43 @@
-#include<iostream>
+#include<iostream> 
+using namespace std; 
+ 
+class book{ 
+  private: 
+  int bookno; 
+  char booktitle[20]; 
+  float price=3; 
+  float tcost; 
+  float totalcost(int copy); 
+  int copy; 
+   
+   
+  public:  
+   void input(){ 
+        cout<<"bookno:"; 
+        cin>>bookno; 
+        cout<<"booktitle:"; 
+        cin>>booktitle; 
+        cout<<"copy:"; 
+        cin>>copy; 
+            totalcost(copy); 
+         
+         
+   } 
+   void purchase(){ 
+      cout<<"bookno"<<bookno<<endl; 
+      cout<<"booktitle"<<booktitle<<endl; 
+      cout<<"book copy"<<copy<<endl; 
+      cout<<"totalcost"<<tcost<<endl; 
+ 
+   } 
+ 
+}; 
+float book:: totalcost(int copy){ 
+    tcost = price*copy; 
+} 
+int main(){ 
+    class book b; 
+    b.input(); 
+    b.purchase(); 
+}
 
-    using namespace std;
-
-        class Xerox{
-
-        private:
-            int bookno,copy=3;
-            char booktype[500];
-            float price;
-            float totalcost(int bookno,int booktype, float price);
-
-        public:
-
-            void INPUT(){
-
-                cout<<"enter book no:-";
-                cin>>bookno;
-                cout<<"enter book type:-";
-                cin<<booktype;
-                cout<<"enter number of copies:-";
-                cin>>copy;
-                
-            }
-
-            void PURCHASE(){
-
-                cout<<"book no:-"<<bookno<<endl;
-                cout<<"book type:-"<<booktype<<endl;
-                cout<<"number of copies:-"<<copy<<endl;  
-                cout<<"totalcost:-"<<totalcost(bookno,booktype,price);              
-            }
-        }
-
-        float Xerox:: totalcost(int bookno,int booktype,float price)
-        {
-            totalcost = copy*price;
-        }
-
-        int main(){
-
-            class Xerox t;
-            t.INPUT();
-            t.PURCHASE();
-            return 0;
-
-        }
