@@ -22,8 +22,24 @@ class cricket
         cin>>notout;
         cout<<"Enter Runs: ";
         cin>>runs;
+        calcavg(innings,notout,runs)<<endl;
+    }
+
+    ~cricket()
+    {
+        cout<<"Enter Batsman Code: ";
+        cin>>bcode;
+        cout<<"Enter Batsman Name: ";
+        cin>>bname;
+        cout<<"Enter Innings: ";
+        cin>>innings;   
+        cout<<"Enter Not Out: ";
+        cin>>notout;
+        cout<<"Enter Runs: ";
+        cin>>runs;
         calcavg(innings,notout,runs);
     }
+
     void displaydata()
     {
         cout<<"Batsman Code: "<<bcode<<endl;

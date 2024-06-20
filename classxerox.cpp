@@ -5,12 +5,10 @@
         class Xerox{
 
         private:
-            int bookno;
-            int copy;
+            int bookno,copy=3;
             char booktype[500];
-            float price=3;
-            float tcost;
-            float totalcost(int copy);
+            float price;
+            float totalcost(int bookno,int booktype, float price);
 
         public:
 
@@ -19,10 +17,10 @@
                 cout<<"enter book no:-";
                 cin>>bookno;
                 cout<<"enter book type:-";
-                cin>>booktype;
+                cin<<booktype;
                 cout<<"enter number of copies:-";
                 cin>>copy;
-                totalcost(copy);
+                
             }
 
             void PURCHASE(){
@@ -30,13 +28,13 @@
                 cout<<"book no:-"<<bookno<<endl;
                 cout<<"book type:-"<<booktype<<endl;
                 cout<<"number of copies:-"<<copy<<endl;  
-                cout<<"totalcost:-"<<tcost;              
+                cout<<"totalcost:-"<<totalcost(bookno,booktype,price);              
             }
-        };
+        }
 
-        float Xerox:: totalcost(int copy)
+        float Xerox:: totalcost(int bookno,int booktype,float price)
         {
-            tcost = price*copy;
+            totalcost = copy*price;
         }
 
         int main(){
