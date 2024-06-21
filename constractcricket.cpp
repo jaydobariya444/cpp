@@ -22,7 +22,7 @@ class cricket
         cin>>notout;
         cout<<"Enter Runs: ";
         cin>>runs;
-        calcavg(innings,notout,runs)<<endl;
+        cout<<calcavg(innings,notout,runs)<<endl;
     }
 
     ~cricket()
