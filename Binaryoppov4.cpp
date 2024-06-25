@@ -3,8 +3,8 @@
 using namespace std;
 
     class Complex{
-        int x;
-        int y;
+        float x;
+        float y;
 
         public:
         Complex(){
@@ -12,7 +12,7 @@ using namespace std;
             y=0;
 
         }
-        Complex(int a, int b){
+        Complex(float a, float b){
             x=a;
             y=b;
         }
@@ -20,10 +20,10 @@ using namespace std;
             cout<<"value of x :"<<x<<endl;
             cout<<"value of y :"<<y<<endl;
         }
-        Complex operator-(Complex e){
+        Complex operator/(Complex e){
             Complex t;
-            t.x=x-e.x;
-            t.y=y-e.y;
+            t.x=x/e.x;
+            t.y=y/e.y;
             return t;
         }
     };
@@ -40,6 +40,6 @@ using namespace std;
         s2.display();
 
         cout<<"final output"<<endl;
-        s3=s1-s2;
+        s3=s1/s2;
         s3.display();
     }
