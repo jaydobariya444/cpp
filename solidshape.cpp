@@ -5,10 +5,11 @@ class Test{
     
     public:
     Test(int a){
+        
         cout<<"volume of square:-"<<a*a*a<<endl;
     } 
     Test(double b,int h,int x){
-        
+
         cout<<"volume of cubiod:-"<<h*b*x<<endl;
     }
     Test(double a, int b){
