@@ -1,58 +1,54 @@
 #include<iostream>
+
 using namespace std;
 
-class cricket
-{
-    protected:
-    int bcode;
-    char bname[20];
-    
-    float batavg;
-    
-    
-    public:
-    void readdata()
-    {
-        cout<<"Enter Batsman Code: ";
-        cin>>bcode;
-        cout<<"Enter Batsman Name: ";
-        cin>>bname;
-    }       
-};
-
-class cricket1:public cricket{
+class Bank{
 
     protected:
-    int innings, notout, runs;
-    
+    int pin;
+    int Account_number;
+    int balance;
+
     public:
-    void readdata1()
-    {
-        cout<<"Enter Innings: ";
-        cin>>innings;   
-        cout<<"Enter Not Out: ";
-        cin>>notout;
-        cout<<"Enter Runs: ";
-        cin>>runs;
-    }
+    char name;
+    int mobile_number;
+    int cash;
+    char email;
+    int amount;
     
-};
 
-    class derive:public cricket1{
-        public:
-        
-        float batavg;
-        void display(){
-            batavg=runs/(innings-notout);
-            cout<<"average is:="<<batavg;
+    void account(){
+        cout<<"ENTER THE NAME:"<<endl;
+        cin>>name;
+        cout<<"ENTER THE MOBILE NO.:"<<endl;
+        cin>>mobile3_number;
+        cout<<"ENTER YOUR E-MAIL ADDRESS:"<<endl;
+        cin>>email;
+        cout<<"CREATE YOUR PIN NUMBER:"<<endl;
+        cin>>pin;
     }
+
+    void deposite(){
+
+        if(enteredpin==pin){
+            if(amount>0){
+                balance+=amount;
+                  cout<<"your deposite amount is:"<<balance<<endl;  
+            }else
+            {
+                cout<<"Enter minimum value 1rs";
+            }
+        }
+        else{
+            cout<<"incorrect pin"; 
+        }
+    }
+
 };
 
-int main()
-{
-    class derive pr;
-    pr.readdata();
-    pr.readdata1();
-    pr.display();
+int main(){
+    class Bank A;
+    A.account();
+    A.deposite();
     return 0;
 }
