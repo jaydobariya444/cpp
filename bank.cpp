@@ -118,6 +118,7 @@ int main(){
 
                 case 2:
                     A.withdraw();
+                    A.exit();
                     break;
 
                 case 3:

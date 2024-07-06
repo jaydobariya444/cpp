@@ -1,138 +1,90 @@
 #include<iostream>
-
 using namespace std;
 
-class Bank{
-
-    protected:
-    int pin;
-    int Account_number;
-    int balance = 5000;
+class hotel{
 
     public:
-    char email;
-    int amount;
-    
-    
-    
-
-    void account(){
-        cout<<"ENTER THE ACCOUNT NUMBER:";
-        cin>>Account_number;
-        cout << "---------------------------------------------------------------------------------------------------------------------------------------"<<endl;
-        cout<<"CREATE YOUR PIN NUMBER:";
-        cin>>pin;
-        cout << "---------------------------------------------------------------------------------------------------------------------------------------"<<endl;
-        cout<<"***************THE ACCOUNT DETAILS:******************"<<endl<<endl;
-        cout << "---------------------------------------------------------------------------------------------------------------------------------------"<<endl;
-        cout<<"ENTER THE ACCOUNT NUMBER:"<<Account_number;
-        cout << "---------------------------------------------------------------------------------------------------------------------------------------"<<endl;
-        cout<<"ENTER THE ACCOUNT BALANCE:"<<balance;
-        cout << "---------------------------------------------------------------------------------------------------------------------------------------"<<endl;
-    }
-
-    void showdata(){
-
-        cout<<"ACCOUNT NUMBER:"<<Account_number;
-        cout << "---------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
-        cout<<"initial balance:"<<balance;
-        cout << "---------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
-    }
-
-    void withdraw(){
-
-        cout << "------WELLCOME TO SBI ------"<<endl<<endl;
-        
-        cout << "---------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
-        cout << "----ENTER YOUR ATM CARD----"<<endl<<endl;
-        
-        cout << "---------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
-        cout<<"ENTER ACCOUNT NUMBER:=";
-        cin>>Account_number;
-        cout << "---------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
-        cout<<"ENETR ATM PIN:=";
-        cin>>pin;
-        cout << "---------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
-        cout<<"ENTER THE WITHDRAW AMOUNT $:=";
-        cin>>amount;
-        cout << "---------------------------------------------------------------------------------------------------------------------------------------"<<endl<<endl;
-        if(amount>0){
-            balance -= amount;
-              cout<<"YOUR ACCOUNT BALANCE IS $:="<<balance<<endl<<endl;  
+        int qty;
+        int amount = 110;
+        int bill;
+        void printab(){
+            cout<<"ENTER QTY : ";
+            cin>>qty;
         }
-        else
-            {
-                cout<<"Enter minimum value 1rs:="<<endl<<endl;
-            }
-    
-    };
-    
 
-    void deposite(){
-        
-        cout << "------WELLCOME TO SBI ------"<<endl<<endl;
-        
-        cout << "----ENTER YOUR ATM CARD----"<<endl<<endl;
-         
-        cout<<"ENTER ACCOUNT NUMBER:=";
-        cin>>Account_number;
-        cout<<"ENETR ATM PIN";
-        cin>>pin;
-        cout<<"ENTER DEPOSITE AMOUNT $:=";
-        cin>>amount;
-            if(amount>0){
-                balance+=amount;
-                  cout<<"YOUR ACCOUNT BALANCE IS:="<<balance<<endl<<endl;  
-            }
-            else
-            {
-                cout<<"Enter minimum value 1rs:="<<endl<<endl;
-            }
-    }
-
-    void exit()
-    {
-        cout << "------THANKS FOR VISIT------";
-    } 
+        void cal(){
+            bill = amount * qty;
+            cout<<"TOTAL BILL : "<<bill;
+        }
 };
-
 int main(){
-    class Bank A;
+
+   int number;
+
+    hotel h;
+
+    cout<<"\t******** HOTEL SKILLQODE ********"<<endl<<endl;
+
+      cout<<"\t ******** FOOD MENU ********"<<endl<<endl;
+
+    cout<<" NO.          FOOD MENU           PRICE"<<endl<<endl;
+
+    cout<<" 1.         GUJARATI THALI           110/-"<<endl;
+
+    // cout<<" 2.         PUNJABI THALI            200/-"<<endl;
+    // cout<<" 3.         VEG MANCHURIAN           100/-"<<endl;
+    // cout<<" 4.          MANCHOW SOUP            80/-"<<endl;
+    // cout<<" 5.           GREEN SOUP             60/-"<<endl;
+    // cout<<" 6.             PIZZA                90/-"<<endl;
+    // cout<<" 7.          CHEESE PIZZA            120/-"<<endl;
+    // cout<<" 8.         MAXICAN PIZZA           170/-"<<endl;
+    // cout<<" 9.         TIKKA PIZZA             160/-"<<endl;
+    // cout<<" 10.            PASTA                100/-"<<endl;
+    // cout<<" 10.       SKILLQODE  SPACIAL        250/-"<<endl<<endl;
     
-        int number;
-        do
-        {
-            cout << "1 : ACOUNT "<<endl<<endl;
-            cout << "2 : CASH WITHDRAWAL "<<endl<<endl ;
-            cout << "3 : CASH DEPOSIT"<<endl<<endl ;
-            cout << "4 : EXIT"<<endl<<endl ;
-            cout << "select number : " ;
-            cin >> number;
-
-                switch (number)
-                {
-                case 1:
-                    A.account();
-                    break;
 
 
-                case 2:
-                    A.withdraw();
-                    break;
+cout<<"***************************************************************************"<<endl;
 
-                case 3:
-                    A.deposite();
-                    break;
+   cout << "select number : ";
+   cin >> number;
 
-                case 5:
-                    A.exit();
-                    break;
-                }
+//     cout<<" NO.        COID  DRINKS            PRICE"<<endl<<endl;
 
-        }
-                while(number!=5);
+//     cout<<" 14.         THUMBS UP                60/-"<<endl;
+//     cout<<" 15.         COCA COLA                50/-"<<endl;
+//     cout<<" 16.           PEPSI                  40/-"<<endl;
+//     cout<<" 17.           FANTA                  50/-"<<endl;
+//     cout<<" 18.           MANGO                  50/-"<<endl;
+//     cout<<" 19.           SOSIYO                 60/-"<<endl<<endl;
 
-                return 0;
+// cout<<"***************************************************************************"<<endl;
+
+//     cout<<" NO.          ICE CREAM(1 CUP)         PRICE"<<endl<<endl;
+
+//     cout<<" 20.             RAJBHOG                90/-"<<endl;
+//     cout<<" 21.            KAJU BADAM              120/-"<<endl;
+//     cout<<" 22.              VENILA                50/-"<<endl;
+//     cout<<" 23.         SKILLQODE  SPACIAL         200/-"<<endl;
+
+// cout<<"***************************************************************************"<<endl;
+         
+//     cout<<" NO.            DRINKS             PRICE"<<endl<<endl;
+
+//     cout<<" 24.              TEA                50/-"<<endl;
+//     cout<<" 25.             COFFEE              70/-"<<endl;
+//     cout<<" 26.            BISLERI              50/-"<<endl<<endl;
 
 
-}       
+do{
+    switch (number)
+    {
+    case 1:
+        h.printab();
+        h.cal();
+        break;
+    }
+}while (number!=1);
+
+return 0;
+}
