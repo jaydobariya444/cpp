@@ -5,7 +5,7 @@ using namespace std;
 class student{
 
     private:
-
+    
     int admno;
     char sname[20];
     float eng,math,sci,total;
